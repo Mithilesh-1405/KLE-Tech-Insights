@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    background-color: #D3D3D3;
+    padding: 1vh;
+    box-shadow: 0vh 0vh 1vh 1px;
+    position: sticky;
+}
+.title{
+    margin-left: 2%;
+}
+ul{
+    display: flex;
+}
+li{
+    margin: 5% 15%;
+    font-size: large;
+    list-style: none;
+}
+li:hover{
+    cursor: pointer;
+}

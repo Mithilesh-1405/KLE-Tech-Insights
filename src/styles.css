@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    margin: 5vh 25%;
+    text-align: center;
+}
+.active{
+    cursor: pointer;
+    color: brown;
+}
+.fontLarger{
+    font-size: larger;
+}
+.btn{
+    background-color: blueviolet;
+    border-radius: 3px;
+    width: 10vh;
+    height: 5vh;
+    font-size: large;
+}

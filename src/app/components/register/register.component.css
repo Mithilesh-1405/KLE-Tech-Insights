@@ -1,0 +1,16 @@
+.control{
+    margin: 2vh 0vh;
+}
+
+.error{
+    color: red;
+    
+}
+
+
+input,select{
+    width: 50%;
+    height: 5vh;
+    background-color: rgb(32, 29, 29);
+    color: white;
+}

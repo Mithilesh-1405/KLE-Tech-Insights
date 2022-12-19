@@ -1,0 +1,95 @@
+<div class="main">
+  <h1>Welcome to register page</h1>
+  <!-- {{userModel|json}} -->
+  <div class="form">
+    <form #myform="ngForm" (ngSubmit)="submitData(myform)" novalidate>
+      <div class="control">
+        <input
+          type="text"
+          required
+          #name="ngModel"
+          name="name"
+          placeholder="Name"
+          ngModel
+        />
+        <div class="error">
+          <small *ngIf="name.invalid && name.touched">Name is required</small>
+        </div>
+      </div>
+      <div class="control">
+        <input
+          type="text"
+          required
+          #rollnum="ngModel"
+          name="rollnum"
+          placeholder="Roll Number"
+          ngModel
+          minlength="3"
+          maxlength="3"
+        />
+        <div class="error">
+          <!-- {{rollnum.className}} -->
+          <div *ngIf="rollnum.errors && rollnum.invalid && rollnum.touched">
+            <small *ngIf="rollnum.errors?.['required']"
+              >Roll number is required</small
+            >
+            <small *ngIf="rollnum.errors?.['minlength']"
+              >Roll Number must be 3 digit</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <input
+          type="text"
+          required
+          #usn="ngModel"
+          name="usn"
+          placeholder="USN"
+          ngModel
+          minlength="12"
+          maxlength="12"
+        />
+        <div class="error">
+          <div *ngIf="usn.errors && usn.invalid && usn.touched">
+            <small *ngIf="usn.errors?.['required']"
+              >Please Enter your USN</small
+            >
+            <small *ngIf="usn.errors?.['minlength']"
+              >USN must be 12 characters</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <select
+          (blur)="validateSem(sem.value)"
+          (change)="validateSem(sem.value)"
+          name="sem"
+          #sem="ngModel"
+          id="sem"
+          ngModel
+        >
+          <option value="default">Select Your Sem</option>
+          <option value="1">SEM 1</option>
+          <option value="2">SEM 2</option>
+          <option value="3">SEM 3</option>
+          <option value="4">SEM 4</option>
+          <option value="5">SEM 5</option>
+          <option value="6">SEM 6</option>
+          <option value="7">SEM 7</option>
+          <option value="8">SEM 8</option>
+        </select>
+        <div class="error">
+          <!-- {{sem.className}} -->
+          <small *ngIf="semhasError && sem.touched">Please Select A Sem</small>
+        </div>
+      </div>
+      <div class="control">
+        <button class="btn" [disabled]="myform.form.invalid || semhasError">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

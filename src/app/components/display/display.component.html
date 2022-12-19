@@ -1,0 +1,18 @@
+<div class="main">
+    <h2>This is your Form Data. Please Verify</h2>
+
+    <table border="4" width="100%">
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>USN</th>
+            <th>Sem</th>
+        </tr>
+        <tr *ngFor="let data of displayModel">
+            <td>{{data.name}}</td>
+            <td>{{data.rollnum}}</td>
+            <td>{{data.usn}}</td>
+            <td>{{data.sem}}</td>
+        </tr>
+    </table>
+</div>
